@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose =require('mongoose');
 
 
-const RegisterSchema = mongoose.Schema({
+const RegisterSchema =mongoose.Schema({
     _id:mongoose.Types.ObjectId,
     name:String,
     number:Number
 });
 
-module.exports =mongoose.Schema('RegisterSchema',RegisterSchema)
+module.exports=mongoose.model('Register',RegisterSchema);
