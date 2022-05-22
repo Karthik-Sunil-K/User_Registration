@@ -3,15 +3,13 @@ const app = express();
 const morgan = require('morgan');
 const mongoose=require('mongoose');
 const bodyParser =require('body-parser');
-const GeneralEvents= require('./api/routes/general')
+const RegisterUser= require('./api/routes/register')
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 
-app.use('/events',GeneralEvents);
-
-
+app.use('/register',RegisterUser);
 
 
 
